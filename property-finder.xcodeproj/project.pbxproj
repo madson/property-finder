@@ -74,7 +74,6 @@
 				DE3FB6E840F77BE2C9DFD66E /* Pods-property-finderTests.debug.xcconfig */,
 				004BA210583A80CDC2DCAAFF /* Pods-property-finderTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
