@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import IGListKit
 
-struct Property: Codable {
-    var id: Int?
+class Property: Codable {
+    var id: Int!
     var price: String?
     var priceLabel: String?
     var thumbnail: String?
@@ -20,4 +21,29 @@ struct Property: Codable {
         case id, price, thumbnail, bedrooms, bathrooms, priceLabel = "price_label"
     }
 
+}
+
+extension Property: Equatable {
+    static public func ==(rhs: Property, lhs: Property) -> Bool {
+        return rhs.id == lhs.id
+    }
+}
+
+extension Property: ListDiffable {
+    
+    public func diffIdentifier() -> NSObjectProtocol {
+        return NSNumber(value: id)
+    }
+    
+    public func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
+        guard let object = object as? Property else {
+            return false
+        }
+        
+        if id != object.id {
+            return false
+        }
+        
+        return self == object
+    }
 }
