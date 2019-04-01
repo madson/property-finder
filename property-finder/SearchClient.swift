@@ -12,8 +12,14 @@ import Alamofire
 struct SearchClient {
     let sessionManager = SessionManager()
 
-    func properties(for page: Int, completion: @escaping ([Property]) -> Void) {
-        let params = ["page" : "\(page)"]
+    func properties(for page: Int, sort: SortOption?, completion: @escaping ([Property]) -> Void) {
+        var params = [String: String]()
+        params["page"] = "\(page)"
+        
+        if let sort = sort {
+            params["ob"] = sort.toStringParameter
+        }
+        
         let api = APIClient(sessionManager: sessionManager)
 
         api.request("/search", parameters: params, headers: nil, method: .get) { (result: APIResult<SearchResponse>) in
