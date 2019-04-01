@@ -32,6 +32,8 @@ class ViewController: UIViewController {
     }
 
     func fetchProperties(for query: String? = nil) {
+        DataRequest.addAcceptableImageContentTypes(["image/jpeg", "image/jpg"])
+
         searchClient.properties(for: self.page) { (properties) in
             self.properties += properties
             self.adapter.performUpdates(animated: true)
