@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  property-finder
 //
-//  Created by Madson on 3/31/19.
+//  Created by iOS Developer on 3/31/19.
 //  Copyright © 2019 Property Finder. All rights reserved.
 //
 

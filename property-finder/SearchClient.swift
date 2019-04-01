@@ -2,7 +2,7 @@
 //  SearchClient.swift
 //  property-finder
 //
-//  Created by Madson on 4/1/19.
+//  Created by iOS Developer on 4/1/19.
 //  Copyright © 2019 Property Finder. All rights reserved.
 //
 
