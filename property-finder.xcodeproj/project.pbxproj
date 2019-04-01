@@ -102,6 +102,59 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F3AEE12222523E780050E441 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F3EA45A92251E5250080438E /* ViewController.swift */,
+				F3AEE1202252318A0050E441 /* SortViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F3AEE12322523E910050E441 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F3EA45C92251F0870080438E /* APIClient.swift */,
+				F3EA45D322520FA90080438E /* SearchClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		F3AEE12422523EAB0050E441 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F3EA45D122520D940080438E /* PropertyCell.swift */,
+				F3EA45D5225219010080438E /* PropertyCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F3AEE12522523EC80050E441 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F3EA45CD225201450080438E /* Property.swift */,
+				F3EA45CB225201100080438E /* SearchResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F3AEE12622523EE70050E441 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F3EA45CF22520D520080438E /* PropertySectionController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F3AEE12722523F250050E441 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F3EA45AB2251E5250080438E /* Main.storyboard */,
+				F3EA45B02251E5270080438E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		F3EA459B2251E5250080438E = {
 			isa = PBXGroup;
 			children = (
@@ -126,19 +179,14 @@
 			isa = PBXGroup;
 			children = (
 				F3EA45A72251E5250080438E /* AppDelegate.swift */,
-				F3EA45A92251E5250080438E /* ViewController.swift */,
-				F3AEE1202252318A0050E441 /* SortViewController.swift */,
-				F3EA45C92251F0870080438E /* APIClient.swift */,
-				F3EA45D322520FA90080438E /* SearchClient.swift */,
-				F3EA45CB225201100080438E /* SearchResponse.swift */,
-				F3EA45CD225201450080438E /* Property.swift */,
-				F3EA45CF22520D520080438E /* PropertySectionController.swift */,
-				F3EA45D122520D940080438E /* PropertyCell.swift */,
-				F3EA45D5225219010080438E /* PropertyCell.xib */,
-				F3EA45AB2251E5250080438E /* Main.storyboard */,
 				F3EA45AE2251E5270080438E /* Assets.xcassets */,
-				F3EA45B02251E5270080438E /* LaunchScreen.storyboard */,
 				F3EA45B32251E5270080438E /* Info.plist */,
+				F3AEE12522523EC80050E441 /* Models */,
+				F3AEE12222523E780050E441 /* ViewControllers */,
+				F3AEE12622523EE70050E441 /* Controllers */,
+				F3AEE12422523EAB0050E441 /* Cells */,
+				F3AEE12322523E910050E441 /* Networking */,
+				F3AEE12722523F250050E441 /* Storyboards */,
 			);
 			path = "property-finder";
 			sourceTree = "<group>";
