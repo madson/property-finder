@@ -8,6 +8,7 @@ target 'property-finder' do
   # Pods for property-finder
   pod 'IGListKit', '~> 3.4.0'
   pod 'Alamofire', '~> 4.7.3'
+  pod 'AlamofireImage', '~> 3.4.1'
 
   target 'property-finderTests' do
     inherit! :search_paths
