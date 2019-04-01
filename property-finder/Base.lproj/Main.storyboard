@@ -17,10 +17,33 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="O95-OD-vWa">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Q9l-M4-xKB">
+                                    <size key="itemSize" width="300" height="250"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="15" maxX="10" maxY="15"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="O95-OD-vWa" secondAttribute="bottom" id="CrU-fA-eEA"/>
+                            <constraint firstItem="O95-OD-vWa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pwn-Ki-vbf"/>
+                            <constraint firstItem="O95-OD-vWa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rsD-d3-xkV"/>
+                            <constraint firstItem="O95-OD-vWa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="w4u-YM-Axq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Property Finder" id="vvN-eB-Y3F"/>
+                    <connections>
+                        <outlet property="collectionView" destination="O95-OD-vWa" id="aoa-3Y-Ywp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

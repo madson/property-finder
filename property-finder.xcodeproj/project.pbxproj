@@ -18,6 +18,10 @@
 		F3EA45CA2251F0870080438E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EA45C92251F0870080438E /* APIClient.swift */; };
 		F3EA45CC225201100080438E /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EA45CB225201100080438E /* SearchResponse.swift */; };
 		F3EA45CE225201450080438E /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EA45CD225201450080438E /* Property.swift */; };
+		F3EA45D022520D520080438E /* PropertySectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EA45CF22520D520080438E /* PropertySectionController.swift */; };
+		F3EA45D222520D940080438E /* PropertyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EA45D122520D940080438E /* PropertyCell.swift */; };
+		F3EA45D422520FA90080438E /* SearchClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EA45D322520FA90080438E /* SearchClient.swift */; };
+		F3EA45D6225219010080438E /* PropertyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3EA45D5225219010080438E /* PropertyCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,10 @@
 		F3EA45C92251F0870080438E /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		F3EA45CB225201100080438E /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		F3EA45CD225201450080438E /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		F3EA45CF22520D520080438E /* PropertySectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertySectionController.swift; sourceTree = "<group>"; };
+		F3EA45D122520D940080438E /* PropertyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyCell.swift; sourceTree = "<group>"; };
+		F3EA45D322520FA90080438E /* SearchClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchClient.swift; sourceTree = "<group>"; };
+		F3EA45D5225219010080438E /* PropertyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PropertyCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +126,12 @@
 				F3EA45A72251E5250080438E /* AppDelegate.swift */,
 				F3EA45A92251E5250080438E /* ViewController.swift */,
 				F3EA45C92251F0870080438E /* APIClient.swift */,
+				F3EA45D322520FA90080438E /* SearchClient.swift */,
 				F3EA45CB225201100080438E /* SearchResponse.swift */,
 				F3EA45CD225201450080438E /* Property.swift */,
+				F3EA45CF22520D520080438E /* PropertySectionController.swift */,
+				F3EA45D122520D940080438E /* PropertyCell.swift */,
+				F3EA45D5225219010080438E /* PropertyCell.xib */,
 				F3EA45AB2251E5250080438E /* Main.storyboard */,
 				F3EA45AE2251E5270080438E /* Assets.xcassets */,
 				F3EA45B02251E5270080438E /* LaunchScreen.storyboard */,
@@ -223,6 +235,7 @@
 			files = (
 				F3EA45B22251E5270080438E /* LaunchScreen.storyboard in Resources */,
 				F3EA45AF2251E5270080438E /* Assets.xcassets in Resources */,
+				F3EA45D6225219010080438E /* PropertyCell.xib in Resources */,
 				F3EA45AD2251E5250080438E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,10 +325,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3EA45D022520D520080438E /* PropertySectionController.swift in Sources */,
 				F3EA45CE225201450080438E /* Property.swift in Sources */,
+				F3EA45D422520FA90080438E /* SearchClient.swift in Sources */,
 				F3EA45CC225201100080438E /* SearchResponse.swift in Sources */,
 				F3EA45AA2251E5250080438E /* ViewController.swift in Sources */,
 				F3EA45A82251E5250080438E /* AppDelegate.swift in Sources */,
+				F3EA45D222520D940080438E /* PropertyCell.swift in Sources */,
 				F3EA45CA2251F0870080438E /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
