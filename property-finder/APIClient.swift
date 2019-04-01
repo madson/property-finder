@@ -16,7 +16,7 @@ enum Method: String {
     case patch = "PATCH"
 }
 
-enum Result<T> {
+enum APIResult<T> {
     case success(T)
     case failure(Error)
 }
@@ -33,11 +33,11 @@ final class APIClient {
         self.sessionManager = sessionManager
     }
     
-    func request(path: String,
+    func request<T: Decodable>(_ path: String,
                  parameters: [String : Any]?,
                  headers: [String : String]?,
                  method: Method,
-                 completion: @escaping (Result<[String : Any]>) -> Void) {
+                 completion: @escaping (APIResult<T>) -> Void) {
         
         let fullPath = "\(basepath)\(path)"
         let url = URL(string: fullPath)!
@@ -46,14 +46,15 @@ final class APIClient {
         
         sessionManager
             .request(url, method: method, parameters: parameters, encoding: encoding, headers: headers)
-            .validate(statusCode: 200 ..< 300)
-            .responseJSON { response in
+            .validate()
+            .responseData { response in
                 
                 switch response.result {
                 case .success(let data):
-                    if let json = data as? [String : Any] {
+                    do {
+                        let json = try JSONDecoder().decode(T.self, from: data)
                         completion(.success(json))
-                    } else {
+                    } catch {
                         completion(.failure(Errors.wrongFormat))
                     }
                     break

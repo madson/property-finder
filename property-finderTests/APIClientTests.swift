@@ -17,10 +17,9 @@ class APIClientTests: XCTestCase {
     func xtestRequestSearchEndpoint() {
         let session = SessionManager()
         let api = APIClient(sessionManager: session)
-        
         let expectation = self.expectation(description: "wait http response")
         
-        api.request(path: "/search", parameters: nil, headers: nil, method: .get) { (result) in
+        api.request("/search", parameters: nil, headers: nil, method: .get) { (result: APIResult<SearchResponse>) in
             switch result {
             case .success(let data):
                 print(data)
