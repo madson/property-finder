@@ -40,7 +40,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Property Finder" id="vvN-eB-Y3F"/>
+                    <navigationItem key="navigationItem" title="Property Finder" id="vvN-eB-Y3F">
+                        <barButtonItem key="rightBarButtonItem" title="Sort" id="G53-SJ-A3F">
+                            <connections>
+                                <segue destination="wTv-vy-J2W" kind="show" id="qTR-dY-qWZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="O95-OD-vWa" id="aoa-3Y-Ywp"/>
                     </connections>
@@ -48,6 +54,90 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1420.289855072464" y="145.98214285714286"/>
+        </scene>
+        <!--Sort-->
+        <scene sceneID="TIZ-JD-pTB">
+            <objects>
+                <viewController id="wTv-vy-J2W" customClass="SortViewController" customModule="property_finder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Smz-g1-C6Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yBA-sa-pmR">
+                                <rect key="frame" x="30" y="118" width="354" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yge-NQ-NYt">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="60"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Bhx-jV-VX5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Price descending">
+                                            <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="priceDescendingDidTap" destination="wTv-vy-J2W" eventType="touchUpInside" id="mfL-rx-ZeD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfN-1z-W0l">
+                                        <rect key="frame" x="0.0" y="80" width="354" height="60"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="pSa-R8-3Vh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Price ascending">
+                                            <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="priceAscendingDidTap" destination="wTv-vy-J2W" eventType="touchUpInside" id="3QS-ST-2Xw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Js0-Dm-v0Z">
+                                        <rect key="frame" x="0.0" y="160" width="354" height="60"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Swa-EQ-39G"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Beds descending">
+                                            <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="bedsDescendingDidTap" destination="wTv-vy-J2W" eventType="touchUpInside" id="MTx-dO-P79"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONj-T5-j5F">
+                                        <rect key="frame" x="0.0" y="240" width="354" height="60"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="7n6-FQ-qts"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Beds ascending">
+                                            <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="bedsAscendingDidTap" destination="wTv-vy-J2W" eventType="touchUpInside" id="001-u4-BrF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mG4-Eh-4yw" firstAttribute="trailing" secondItem="yBA-sa-pmR" secondAttribute="trailing" constant="30" id="Tmn-YO-Knp"/>
+                            <constraint firstItem="yBA-sa-pmR" firstAttribute="leading" secondItem="mG4-Eh-4yw" secondAttribute="leading" constant="30" id="X6P-Dv-NsQ"/>
+                            <constraint firstItem="yBA-sa-pmR" firstAttribute="top" secondItem="mG4-Eh-4yw" secondAttribute="top" constant="30" id="rbE-iE-bEK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mG4-Eh-4yw"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sort" id="Hhc-Nq-Wf0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Clh-mp-NxK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2302.898550724638" y="145.98214285714286"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mnB-Tj-ugb">
@@ -57,6 +147,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4VG-SQ-QQ0">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.88076907396316528" green="0.069250725209712982" blue="0.1999790370464325" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
