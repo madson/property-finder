@@ -42,7 +42,7 @@ final class APIClient {
         let fullPath = "\(basepath)\(path)"
         let url = URL(string: fullPath)!
         let method = Alamofire.HTTPMethod(rawValue: method.rawValue)!
-        let encoding = JSONEncoding()
+        let encoding: ParameterEncoding = (method == .get) ? URLEncoding() : JSONEncoding()
         
         sessionManager
             .request(url, method: method, parameters: parameters, encoding: encoding, headers: headers)
