@@ -14,7 +14,8 @@
 		F3EA45AD2251E5250080438E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3EA45AB2251E5250080438E /* Main.storyboard */; };
 		F3EA45AF2251E5270080438E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3EA45AE2251E5270080438E /* Assets.xcassets */; };
 		F3EA45B22251E5270080438E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3EA45B02251E5270080438E /* LaunchScreen.storyboard */; };
-		F3EA45BD2251E5270080438E /* property_finderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EA45BC2251E5270080438E /* property_finderTests.swift */; };
+		F3EA45BD2251E5270080438E /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EA45BC2251E5270080438E /* APIClientTests.swift */; };
+		F3EA45CA2251F0870080438E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EA45C92251F0870080438E /* APIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +43,9 @@
 		F3EA45B12251E5270080438E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3EA45B32251E5270080438E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3EA45B82251E5270080438E /* property-finderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "property-finderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3EA45BC2251E5270080438E /* property_finderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = property_finderTests.swift; sourceTree = "<group>"; };
+		F3EA45BC2251E5270080438E /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
 		F3EA45BE2251E5270080438E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3EA45C92251F0870080438E /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				F3EA45A72251E5250080438E /* AppDelegate.swift */,
 				F3EA45A92251E5250080438E /* ViewController.swift */,
+				F3EA45C92251F0870080438E /* APIClient.swift */,
 				F3EA45AB2251E5250080438E /* Main.storyboard */,
 				F3EA45AE2251E5270080438E /* Assets.xcassets */,
 				F3EA45B02251E5270080438E /* LaunchScreen.storyboard */,
@@ -122,7 +125,7 @@
 		F3EA45BB2251E5270080438E /* property-finderTests */ = {
 			isa = PBXGroup;
 			children = (
-				F3EA45BC2251E5270080438E /* property_finderTests.swift */,
+				F3EA45BC2251E5270080438E /* APIClientTests.swift */,
 				F3EA45BE2251E5270080438E /* Info.plist */,
 			);
 			path = "property-finderTests";
@@ -305,6 +308,7 @@
 			files = (
 				F3EA45AA2251E5250080438E /* ViewController.swift in Sources */,
 				F3EA45A82251E5250080438E /* AppDelegate.swift in Sources */,
+				F3EA45CA2251F0870080438E /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3EA45BD2251E5270080438E /* property_finderTests.swift in Sources */,
+				F3EA45BD2251E5270080438E /* APIClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
